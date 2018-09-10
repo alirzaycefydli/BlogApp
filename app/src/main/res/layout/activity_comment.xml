@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentActivity">
+
+    <include layout="@layout/tool_bar_layout"
+        android:id="@+id/comment_toolbar"/>
+
+    <TextView
+        android:layout_below="@id/comment_toolbar"
+        android:id="@+id/comments"
+        android:text="Comments : "
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comment_recycler_view"
+        android:layout_margin="20dp"
+        android:layout_below="@id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/comment_edit_text"
+        android:layout_alignParentBottom="true"
+        android:hint="Comments here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageButton
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_send"
+        android:id="@+id/comment_send"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+</RelativeLayout>
